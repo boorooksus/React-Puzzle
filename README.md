@@ -20,7 +20,8 @@ front
         ├── typings: 타입 저장 디렉토리
         ├── utils: 기능 저장 디렉토리
         │
-        ├── main.js: 컴포넌트의 조합으로 메인 페이지를 구성
-        └── styles: CSS를 저장하는 디렉토리 (base.css가 기본)
+        ├── App.tsx: 레이아웃 및 페이지 라우팅
+        ├── main.tsx: 컴포넌트의 조합으로 메인 페이지를 구성
+        └── index.html: 웹 표준 문서 설정
 
 ```
