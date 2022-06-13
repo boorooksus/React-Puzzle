@@ -2,7 +2,7 @@ import { useReducer, Reducer } from 'react';
 import reducer from '../utils/reducer';
 import { ReducerState, ReducerActions, SHUFFLE } from '../typings/types';
 
-import '../css/Puzzle.css';
+import '../assets/Puzzle.css';
 
 const initialState: ReducerState = {
   items: ['4', '1', '2', '7', '6', '3', null, '5', '8'],
