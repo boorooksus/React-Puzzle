@@ -1,13 +1,15 @@
 import React from 'react';
 import Puzzle from '../partials/Puzzle';
 import HeroHome from '../partials/HeroHome';
+import pattern from '../assets/images/patternpad.svg';
 
 const Home = () => {
   return (
-    <main className="flex-grow">
-      <div className="relative">
+    <main className="flex-grow gb-fixed ">
+      <img className="absolute top-0 rotate-180" src={pattern} />
+      <div className="relative ">
         <HeroHome />
-        <div className="pt-32 pb-12 md:pt-40 md:pb-20  flex justify-center">
+        <div className="pt-12 pb-12 flex justify-center bg-patternpad bg-cover">
           <Puzzle />
         </div>
       </div>

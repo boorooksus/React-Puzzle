@@ -2,8 +2,6 @@ import { useReducer, Reducer } from 'react';
 import reducer from '../utils/reducer';
 import { ReducerState, ReducerActions, SHUFFLE } from '../typings/types';
 
-import '../assets/Puzzle.css';
-
 const initialState: ReducerState = {
   items: ['4', '1', '2', '7', '6', '3', null, '5', '8'],
   complete: false,
@@ -28,7 +26,12 @@ const Puzzle = () => {
           </div>
         ))}
       </div>
-      <div className="Puzzle-controls">
+      {/* <div className="Puzzle-controls"> */}
+      <div
+        className="max-w-xs mx-auto sm:max-w-none sm:flex sm:justify-center mt-4"
+        data-aos="zoom-y-out"
+        data-aos-delay="300"
+      >
         <button
           className="Puzzle-shuffle"
           onClick={() => dispatch({ type: SHUFFLE })}
