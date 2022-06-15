@@ -16,7 +16,7 @@
   font-size: 24pt;
   border: 1px solid rgba(0, 0, 0, 0.6);
   border-radius: 0;
-  background-color: #0066ff;
+  background-color: #338cf5;
   color: white;
   box-shadow: inset 0 -2px 6px rgba(0, 0, 0, 0.2);
   justify-content: center;
@@ -38,7 +38,7 @@
 }
 
 .Puzzle-complete {
-  color: #ea52f8;
+  color: #338cf5;
   font-size: 20pt;
   margin-top: 16px;
 }
@@ -81,13 +81,13 @@
 }
 
 button.Puzzle-shuffle {
-  background-color: #ea52f8;
+  background-color: #00b23a;
   color: white;
   width: 100%;
 }
 
 button.Puzzle-reset {
-  background-color: #0066ff;
+  background-color: #e75a2d;
   color: white;
   margin-left: 1rem;
   width: 100%;

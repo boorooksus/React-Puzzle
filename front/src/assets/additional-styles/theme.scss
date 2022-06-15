@@ -144,7 +144,11 @@ html {
   background-clip: text;
   color: transparent;
   background-image: linear-gradient(to right, var(--tw-gradient-stops));
-  --tw-gradient-from: #ea52f8;
+  --tw-gradient-from: #00b23a;
   --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
-  --tw-gradient-to: #0066ff;
+  --tw-gradient-to: #e75a2d;
+}
+
+.background-pattern {
+  background-image: url('../images/patternpad6.svg');
 }
