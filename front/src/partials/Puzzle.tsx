@@ -1,4 +1,4 @@
-import { useReducer, Reducer } from 'react';
+import { useReducer, Reducer, useEffect } from 'react';
 import reducer from '../utils/reducer';
 import { ReducerState, ReducerActions, SHUFFLE } from '../typings/types';
 
@@ -12,6 +12,10 @@ const Puzzle = () => {
     reducer,
     initialState,
   );
+
+  useEffect(() => {
+    dispatch({ type: SHUFFLE });
+  }, []);
 
   return (
     <div className="Puzzle">

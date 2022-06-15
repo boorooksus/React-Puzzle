@@ -10,7 +10,7 @@ const Header = () => {
           {/* Site branding */}
           <div className="flex-shrink-0 mr-4">
             {/* Logo */}
-            <Link to="/" className="block" aria-label="Cruip">
+            <a href="/" className="block" aria-label="Cruip">
               <svg
                 className="w-8 h-8"
                 viewBox="0 0 32 32"
@@ -38,7 +38,7 @@ const Header = () => {
                   fillRule="nonzero"
                 />
               </svg>
-            </Link>
+            </a>
           </div>
 
           {/* Site navigation */}
@@ -47,7 +47,7 @@ const Header = () => {
               <li>
                 <Link
                   to="/signin"
-                  className="font-medium text-gray-600 hover:text-gray-900 px-5 py-3 flex items-center transition duration-150 ease-in-out"
+                  className="btn-sm font-medium text-gray-600 hover:text-gray-900 px-5 py-3 flex items-center transition duration-150 ease-in-out bg-white"
                 >
                   Sign in
                 </Link>

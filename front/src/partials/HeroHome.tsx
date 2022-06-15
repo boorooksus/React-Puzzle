@@ -2,8 +2,6 @@ import React, { useState } from 'react';
 import pattern from '../assets/images/patternpad.svg';
 
 function HeroHome() {
-  const [videoModalOpen, setVideoModalOpen] = useState(false);
-
   return (
     <section className="relative">
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
@@ -15,7 +13,10 @@ function HeroHome() {
               className="text-5xl md:text-6xl font-extrabold leading-tighter tracking-tighter mb-4"
               data-aos="zoom-y-out"
             >
-              Enjoy the number <span className="highlight-text">Puzzle</span>
+              Enjoy the number{' '}
+              <span className="bg-white">
+                <span className="highlight-text px-3">Puzzle</span>
+              </span>
             </h1>
             <div className="max-w-3xl mx-auto">
               <p
