@@ -1,7 +1,7 @@
 import React from 'react';
 import Puzzle from '../partials/Puzzle';
 import HeroHome from '../partials/HeroHome';
-import pattern from '../assets/images/patternpad6.svg';
+import pattern from '../assets/images/patternpad3.svg';
 
 const Home = () => {
   return (
@@ -9,6 +9,8 @@ const Home = () => {
       <img
         className="fixed top-0 rotate-180 opacity-40 transition duration-300 ease-in-out"
         src={pattern}
+        alt="backgorund image"
+        aria-hidden="true"
       />
 
       <div className="relative ">

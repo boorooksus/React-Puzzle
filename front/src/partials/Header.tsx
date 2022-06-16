@@ -10,7 +10,7 @@ const Header = () => {
           {/* Site branding */}
           <div className="flex-shrink-0 mr-4">
             {/* Logo */}
-            <a href="/" className="block" aria-label="Cruip">
+            <a href="/" className="block" aria-label="Main Page">
               <svg
                 className="w-8 h-8"
                 viewBox="0 0 32 32"

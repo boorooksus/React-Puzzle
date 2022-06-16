@@ -1,0 +1,39 @@
+Square-image {
+  background-image: url(./images/eagle.jpeg);
+  background-size: 216px 216px;
+  //   background-attachment: fixed;
+  background-repeat: no-repeat;
+}
+
+.Puzzle-square-1 {
+  @extend Square-image;
+  background-position: 0px 0px;
+}
+.Puzzle-square-2 {
+  @extend Square-image;
+  background-position: -72px 0px;
+}
+.Puzzle-square-3 {
+  @extend Square-image;
+  background-position: -144px 0px;
+}
+.Puzzle-square-4 {
+  @extend Square-image;
+  background-position: 0px -72px;
+}
+.Puzzle-square-5 {
+  @extend Square-image;
+  background-position: -72px -72px;
+}
+.Puzzle-square-6 {
+  @extend Square-image;
+  background-position: -144px -72px;
+}
+.Puzzle-square-7 {
+  @extend Square-image;
+  background-position: 0px -144px;
+}
+.Puzzle-square-8 {
+  @extend Square-image;
+  background-position: -72px -144px;
+}

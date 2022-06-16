@@ -13,7 +13,7 @@ function HeroHome() {
               className="text-5xl md:text-6xl font-extrabold leading-tighter tracking-tighter mb-4"
               data-aos="zoom-y-out"
             >
-              Enjoy the number{' '}
+              Enjoy the sliding{' '}
               <span className="bg-white">
                 <span className="highlight-text px-3">Puzzle</span>
               </span>

@@ -1,9 +1,10 @@
 import { useReducer, Reducer, useEffect } from 'react';
 import reducer from '../utils/reducer';
 import { ReducerState, ReducerActions, SHUFFLE } from '../typings/types';
+import eagle from '../assets/images/eagle.jpeg';
 
 const initialState: ReducerState = {
-  items: ['4', '1', '2', '7', '6', '3', null, '5', '8'],
+  items: ['1', '2', '3', '4', '5', '6', '7', '8', null],
   complete: false,
 };
 
@@ -22,12 +23,10 @@ const Puzzle = () => {
       <div className="Puzzle-squares">
         {state.items.map((s: string | null, i: number) => (
           <div
-            className={`Puzzle-square ${s ? '' : 'Puzzle-square-empty'}`}
+            className={` ${s ? `Puzzle-square-${s}` : 'Puzzle-square-empty'}`}
             key={`square-${i}`}
             onClick={() => dispatch({ type: 'move', payload: i })}
-          >
-            {s}
-          </div>
+          ></div>
         ))}
       </div>
       {/* <div className="Puzzle-controls"> */}

@@ -1,3 +1,5 @@
+@import './puzzle_squares.scss';
+
 .Puzzle-squares {
   display: inline-grid;
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.3);
@@ -47,33 +49,6 @@
   display: block;
 }
 
-// .Puzzle button {
-//   margin: 16px;
-//   padding: 6px 16px;
-//   font-size: 0.875rem;
-//   min-width: 64px;
-//   box-sizing: border-box;
-//   box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.14),
-//     0 1px 5px 0 rgba(0, 0, 0, 0.12);
-//   font-family: 'Roboto', 'Helvetica', 'Arial', sans-serif;
-//   font-weight: 500;
-//   line-height: 1.75;
-//   border-radius: 4px;
-//   letter-spacing: 0.02857em;
-//   text-transform: uppercase;
-//   border: 0;
-//   cursor: pointer;
-//   outline: 0;
-//   position: relative;
-//   align-items: center;
-//   vertical-align: middle;
-//   -moz-appearance: none;
-//   justify-content: center;
-//   text-decoration: none;
-//   -moz-user-select: none;
-//   -webkit-appearance: none;
-// }
-
 .Puzzle button {
   @apply font-medium inline-flex items-center justify-center border border-transparent rounded leading-snug transition duration-150 ease-in-out;
 
@@ -81,13 +56,13 @@
 }
 
 button.Puzzle-shuffle {
-  background-color: #00b23a;
+  background-color: #338cf5;
   color: white;
   width: 100%;
 }
 
 button.Puzzle-reset {
-  background-color: #e75a2d;
+  background-color: #ea52f8;
   color: white;
   margin-left: 1rem;
   width: 100%;
