@@ -31,11 +31,11 @@ export const Confetti = () => {
 
   const rendering = () => {
     const res = [];
-    for (let i = 0; i < 100; i++) {
+    for (let i = 0; i < 200; i++) {
       // Random rotation
       var randomRotation = Math.floor(Math.random() * 360);
       // Random Scale
-      var randomScale = Math.random() * 1;
+      var randomScale = Math.random() + 0.5;
       // Random width & height between 0 and viewport
       var randomWidth = Math.floor(
         Math.random() *
@@ -74,7 +74,7 @@ export const Confetti = () => {
             top: randomHeight,
             right: randomWidth,
             backgroundColor: randomColor,
-            transition: `skew(15eg) rotate(${randomRotation}deg)`,
+            transform: `skew(15deg) rotate(${randomRotation}deg) scale(${randomScale})`,
             animationDelay: `${randomAnimationDelay}s`,
           }}
         ></div>,
