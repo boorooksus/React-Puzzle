@@ -2,6 +2,7 @@ import React from 'react';
 import Puzzle from '../partials/Puzzle';
 import HeroHome from '../partials/HeroHome';
 import pattern from '../assets/images/patternpad3.svg';
+import Confetti from '../partials/Confetti';
 
 const Home = () => {
   return (

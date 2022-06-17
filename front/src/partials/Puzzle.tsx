@@ -1,7 +1,9 @@
-import { useReducer, Reducer, useEffect } from 'react';
+import { useReducer, Reducer, useEffect, useState } from 'react';
 import reducer from '../utils/reducer';
 import { ReducerState, ReducerActions, SHUFFLE } from '../typings/types';
 import eagle from '../assets/images/eagle.jpeg';
+import flower from '../assets/images/flower.png';
+import Confetti from './Confetti';
 
 const initialState: ReducerState = {
   items: ['1', '2', '3', '4', '5', '6', '7', '8', null],
@@ -13,6 +15,8 @@ const Puzzle = () => {
     reducer,
     initialState,
   );
+  const [images, setImages] = useState([eagle, flower]);
+  const [imageIdx, setImageIdx] = useState(0);
 
   useEffect(() => {
     dispatch({ type: SHUFFLE });
@@ -26,6 +30,7 @@ const Puzzle = () => {
             className={` ${s ? `Puzzle-square-${s}` : 'Puzzle-square-empty'}`}
             key={`square-${i}`}
             onClick={() => dispatch({ type: 'move', payload: i })}
+            style={{ backgroundImage: `${s ? `url(${images[1]})` : ''}` }}
           ></div>
         ))}
       </div>
@@ -48,7 +53,12 @@ const Puzzle = () => {
           Reset
         </button>
       </div>
-      {state.complete && <div className="Puzzle-complete">Complete!</div>}
+      {state.complete && (
+        <div>
+          <Confetti />
+          <div className="Puzzle-complete">Complete!</div>
+        </div>
+      )}
     </div>
   );
 };
