@@ -1,13 +1,18 @@
 import { useReducer, Reducer, useEffect, useState } from 'react';
 import reducer from '../utils/reducer';
 import { ReducerState, ReducerActions, SHUFFLE } from '../typings/types';
+import loadable from '@loadable/component';
 import eagle from '../assets/images/eagle.jpeg';
 import flower from '../assets/images/flower.png';
-import Confetti from './Confetti';
+import wolf from '../assets/images/wolf.jpeg';
+import sheep from '../assets/images/sheep.jpeg';
+
+const Confetti = loadable(() => import('./Confetti'));
 
 const initialState: ReducerState = {
   items: ['1', '2', '3', '4', '5', '6', '7', '8', null],
   complete: false,
+  imageIdx: 0,
 };
 
 const Puzzle = () => {
@@ -15,11 +20,11 @@ const Puzzle = () => {
     reducer,
     initialState,
   );
-  const [images, setImages] = useState([eagle, flower]);
+  const [images, setImages] = useState([eagle, flower, wolf, sheep]);
   const [imageIdx, setImageIdx] = useState(0);
 
   useEffect(() => {
-    dispatch({ type: SHUFFLE });
+    dispatch({ type: SHUFFLE, payload: images.length });
   }, []);
 
   return (
@@ -30,7 +35,9 @@ const Puzzle = () => {
             className={` ${s ? `Puzzle-square-${s}` : 'Puzzle-square-empty'}`}
             key={`square-${i}`}
             onClick={() => dispatch({ type: 'move', payload: i })}
-            style={{ backgroundImage: `${s ? `url(${images[1]})` : ''}` }}
+            style={{
+              backgroundImage: `${s ? `url(${images[state.imageIdx]})` : ''}`,
+            }}
           ></div>
         ))}
       </div>
@@ -42,7 +49,7 @@ const Puzzle = () => {
       >
         <button
           className="Puzzle-shuffle"
-          onClick={() => dispatch({ type: SHUFFLE })}
+          onClick={() => dispatch({ type: SHUFFLE, payload: images.length })}
         >
           Shuffle
         </button>

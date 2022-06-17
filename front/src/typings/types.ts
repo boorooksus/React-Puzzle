@@ -1,6 +1,7 @@
 export interface ReducerState {
   items: (string | null)[];
   complete: boolean;
+  imageIdx: number;
 }
 
 export const MOVE = 'move';
@@ -14,6 +15,7 @@ export interface MoveAction {
 
 export interface ShuffleAction {
   type: typeof SHUFFLE;
+  payload: number;
 }
 
 export interface ResetAction {
