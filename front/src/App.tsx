@@ -4,6 +4,8 @@ import './assets/style.scss';
 import AOS from 'aos';
 import Home from './pages/Home';
 import Header from './partials/Header';
+import SignUp from './pages/SignUp';
+import SignIn from './pages/SignIn';
 
 function App() {
   const location = useLocation();
@@ -26,6 +28,8 @@ function App() {
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/SignUp" element={<SignUp />} />
+        <Route path="/SignIn" element={<SignIn />} />
       </Routes>
     </>
   );

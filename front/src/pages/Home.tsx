@@ -2,13 +2,12 @@ import React from 'react';
 import Puzzle from '../partials/Puzzle';
 import HeroHome from '../partials/HeroHome';
 import pattern from '../assets/images/patternpad3.svg';
-import Confetti from '../partials/Confetti';
 
 const Home = () => {
   return (
     <main className="flex-grow gb-fixed ">
       <img
-        className="fixed top-0 rotate-180 opacity-40 transition duration-300 ease-in-out"
+        className="fixed top-0 rotate-180 opacity-60 transition duration-300 ease-in-out"
         src={pattern}
         alt="backgorund image"
         aria-hidden="true"
