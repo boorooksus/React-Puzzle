@@ -1,5 +1,5 @@
 {
-  "name": "front",
+  "name": "React-Puzzle",
   "private": true,
   "version": "0.0.0",
   "scripts": {
@@ -15,7 +15,8 @@
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
     "react-router-dom": "^6.3.0",
-    "react-transition-group": "^4.4.2"
+    "react-transition-group": "^4.4.2",
+    "sass": "^1.54.0"
   },
   "devDependencies": {
     "@types/aos": "^3.0.4",
