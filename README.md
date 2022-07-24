@@ -14,7 +14,7 @@
 
 ![suffle](https://user-images.githubusercontent.com/55964775/180636956-b967aebe-bf5a-4d11-b776-fdd4b07c5e3a.gif)
 
-### 성공
+### 퍼즐 성공
 
 ![success5](https://user-images.githubusercontent.com/55964775/180637337-ecaaf077-abe5-4de4-9415-4408109d9cec.gif)
 
@@ -70,7 +70,7 @@ $ npm run dev
 │    ├── App.tsx
 │    └── main.tsx
 │
-├── index.html  # 웹 표준 문서 설정
+├── index.html
 ├── pakage.json
 ├── ...
 └── vite.config.ts
