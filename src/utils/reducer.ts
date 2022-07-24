@@ -46,7 +46,7 @@ const reducer = (state: ReducerState, action: ReducerActions): ReducerState => {
       };
     }
     case 'shuffle': {
-      let newIdx = Math.floor(Math.random() * action.payload);
+      // let newIdx = Math.floor(Math.random() * action.payload);
       let newState = { ...state };
       do {
         for (let i = 0; i < 300; i++) {
@@ -59,13 +59,26 @@ const reducer = (state: ReducerState, action: ReducerActions): ReducerState => {
           );
         }
       } while (newState.complete);
-      return { ...newState, imageIdx: newIdx, complete: false };
+      return { ...newState, complete: false };
+    }
+    case 'change': {
+      let newIdx = Math.floor(Math.random() * action.payload);
+      while (newIdx === state.imageIdx) {
+        newIdx = Math.floor(Math.random() * action.payload);
+      }
+      let newState = { ...state };
+      return {
+        ...newState,
+        imageIdx: newIdx,
+        complete: false,
+        items: [...CORRECT],
+      };
     }
     case 'reset': {
       return {
         ...state,
         items: [...CORRECT],
-        complete: true,
+        complete: false,
       };
     }
     default: {

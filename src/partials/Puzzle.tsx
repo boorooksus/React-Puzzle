@@ -1,6 +1,11 @@
 import { useReducer, Reducer, useEffect, useState } from 'react';
 import reducer from '../utils/reducer';
-import { ReducerState, ReducerActions, SHUFFLE } from '../typings/types';
+import {
+  ReducerState,
+  ReducerActions,
+  SHUFFLE,
+  CHANGE,
+} from '../typings/types';
 import loadable from '@loadable/component';
 import eagle from '../assets/images/eagle.jpeg';
 import flower from '../assets/images/flower.png';
@@ -24,7 +29,10 @@ const Puzzle = () => {
   const [imageIdx, setImageIdx] = useState(0);
 
   useEffect(() => {
-    dispatch({ type: SHUFFLE, payload: images.length });
+    dispatch({
+      type: CHANGE,
+      payload: images.length,
+    });
   }, []);
 
   return (
@@ -55,9 +63,14 @@ const Puzzle = () => {
         </button>
         <button
           className="Puzzle-reset"
-          onClick={() => dispatch({ type: 'reset' })}
+          onClick={() =>
+            dispatch({
+              type: 'change',
+              payload: images.length,
+            })
+          }
         >
-          Reset
+          change
         </button>
       </div>
       {state.complete && (

@@ -11,7 +11,7 @@ function HeroHome() {
           <div className="text-center pb-4">
             <h1
               className="text-5xl md:text-6xl font-extrabold leading-tighter tracking-tighter mb-4"
-              data-aos="zoom-y-out"
+              data-aos="slide-down"
             >
               Enjoy the sliding{' '}
               <span className="bg-white">

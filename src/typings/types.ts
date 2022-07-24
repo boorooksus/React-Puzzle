@@ -7,6 +7,7 @@ export interface ReducerState {
 export const MOVE = 'move';
 export const SHUFFLE = 'shuffle';
 export const RESET = 'reset';
+export const CHANGE = 'change';
 
 export interface MoveAction {
   type: typeof MOVE;
@@ -22,4 +23,13 @@ export interface ResetAction {
   type: typeof RESET;
 }
 
-export type ReducerActions = MoveAction | ShuffleAction | ResetAction;
+export interface ChangeAction {
+  type: typeof CHANGE;
+  payload: number;
+}
+
+export type ReducerActions =
+  | MoveAction
+  | ShuffleAction
+  | ResetAction
+  | ChangeAction;
