@@ -1,7 +1,7 @@
-import React from 'react';
-import Puzzle from '../partials/Puzzle';
-import HeroHome from '../partials/HeroHome';
-import pattern from '../assets/images/patternpad3.svg';
+import React from "react";
+import Puzzle from "../partials/Puzzle";
+import HeroHome from "../partials/HeroHome";
+import pattern from "../assets/images/patternpad3.svg";
 
 const Home = () => {
   return (
@@ -15,7 +15,7 @@ const Home = () => {
 
       <div className="relative ">
         <HeroHome />
-        <div className="pt-12 pb-12 flex justify-center ">
+        <div className="md:pt-12 pb-12 flex justify-center ">
           <Puzzle />
         </div>
       </div>

@@ -1,4 +1,4 @@
-@import './puzzle_squares.scss';
+@import "./puzzle_squares.scss";
 
 .Puzzle-squares {
   display: inline-grid;
@@ -74,6 +74,7 @@ button.Puzzle-reset {
 
 @media (max-width: 768px) {
   button.Puzzle-reset {
+    margin-top: 0.5rem;
     margin-left: 0rem;
   }
 }
